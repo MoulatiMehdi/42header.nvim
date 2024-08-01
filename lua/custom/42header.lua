@@ -44,10 +44,12 @@ local function filetype()
 end
 
 local function ascii(n)
-	return asciiart[n - 3]
+	return asciiart[n - 2]
 end
 
 local function textline(left, right)
+	left = left or "" -- Default to empty string if left is nil
+	right = right or "" -- Default to empty string if right is nil
 	local left_str = vim.fn.strpart(left, 0, length - margin * 2 - #right)
 	return start
 		.. string.rep(" ", margin - #start)
