@@ -40,7 +40,7 @@
 2. Add the following to your `init.lua` to load the plugin:
 
     ```lua
-    require('42header.42header')
+    require('42header')
     ```
 
 ## Usage 🛠️
