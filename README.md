@@ -24,7 +24,7 @@
       use 'wbthomason/packer.nvim'
 
       -- Add the 42header plugin
-      use 'MoulatiMehdi/neovim-42header'
+      use 'MoulatiMehdi/42header.nvim'
     end)
     ```
 
