@@ -24,7 +24,12 @@
       use 'wbthomason/packer.nvim'
 
       -- Add the 42header plugin
-      use 'MoulatiMehdi/42header.nvim'
+      use {
+        'MoulatiMehdi/42header.nvim',
+        config = function()
+          require('42header') -- Adjust the path if necessary
+        end
+      }
     end)
     ```
 
@@ -34,13 +39,28 @@
     :PackerSync
     ```
 
-## Configuration ⚙️
+### Using `lazy.nvim`
 
-1. Place the `42header.lua` file in a directory named `42header` (e.g., `lua/42header/`).
-2. Add the following to your `init.lua` to load the plugin:
+1. Ensure you have `lazy.nvim` installed. If not, follow the [installation instructions](https://github.com/folke/lazy.nvim#installation) on the `lazy.nvim` GitHub page.
+
+2. Add the `42header` plugin to your `lazy.nvim` setup in your `init.lua`:
 
     ```lua
-    require('42header')
+    require('lazy').setup({
+      -- Other plugins
+      {
+        'MoulatiMehdi/42header.nvim',
+        config = function()
+          require('42header') -- Adjust the path if necessary
+        end
+      },
+    })
+    ```
+
+3. Open Neovim and run the following command to install the plugin:
+
+    ```vim
+    :Lazy sync
     ```
 
 ## Usage 🛠️
