@@ -16,7 +16,7 @@
 1. Add the following to your `init.lua`:
 
     ```lua
-    use 'your-github-username/42header'
+    use 'MoulatiMehdi/neovim-42header'
     ```
 
 2. Source your `init.lua` and run `:PackerSync`.
