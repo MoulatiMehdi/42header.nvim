@@ -31,7 +31,6 @@ M.config = {
 -- Helper functions
 function M.filetype()
 	local f = vim.fn.expand("%:t")
-	M.config.start, M.config.finish, M.config.fill = "#", "#", "*"
 
 	for pattern, style in pairs(M.config.types) do
 		if f:match(pattern) then
