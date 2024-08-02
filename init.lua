@@ -1,3 +1,3 @@
 vim.opt.runtimepath:append(".")
 
-require("custom.42header")
+require("42header")
